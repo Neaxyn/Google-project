@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Nano Gemini Chatbot",
+  "version": "1.0",
+  "description": "Chatbot utilisant l'API de Nano Gemini",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "16.jpg"
+  }
+}
