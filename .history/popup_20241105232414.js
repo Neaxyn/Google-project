@@ -1,5 +1,5 @@
-document.getElementById("send").addEventListener("click", async function get() {
-    const userInput = document.getElementById("user-input").value;
+document.getElementById("sendButton").addEventListener("click", async function() {
+    const userInput = document.getElementById("userInput").value;
     if (!userInput) return;
 
     // Ajouter le message "pop!" dans la div messages

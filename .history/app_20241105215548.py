@@ -2,26 +2,19 @@ import logging
 from flask import Flask, request, jsonify
 import google.generativeai as genai
 import os
-from dotenv import load_dotenv
-from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
-# Load environment variables from .env file
-load_dotenv()
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
 
 # Configuration API Google Generative AI
-api_key = os.getenv("API_KEY")
-genai.configure(api_key=api_key)
+os.environ["API_KEY"] = "AIzaSyAe6bAVaFgub8ZRX8eqwlCw78LfxgfrLvs"
+genai.configure(api_key=os.environ["API_KEY"])
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 @app.route("/chat", methods=["POST"])
-
 def chat():
-    logging.debug("Received chat request")
     user_input = request.json.get("message")
     logging.debug(f"Received user input: {user_input}")
     if user_input:

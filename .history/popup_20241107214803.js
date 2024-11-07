@@ -6,7 +6,7 @@ document.getElementById("send").addEventListener("click", async function get() {
     const messageContainer = document.getElementById("messages");
     messageContainer.innerHTML += `<div class="bot-message">pop!</div>`;
 
-    const response = await fetch('http://127.0.0.1:5000/chat', {
+    const response = await fetch('http://127.0.0.1:5500/chat', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
