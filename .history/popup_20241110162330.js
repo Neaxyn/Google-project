@@ -8,10 +8,9 @@ document.getElementById("user-input").addEventListener("keydown", function(event
 
 async function sendMessage() {
     a++;
-     if (a>1){
+     if (a=!1){
         return;
      }
-
     const userInput = document.getElementById("user-input").value;
     if (!userInput) return;
 
