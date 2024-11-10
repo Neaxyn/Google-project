@@ -1,4 +1,11 @@
-document.getElementById("send").addEventListener("click", async function() {
+document.getElementById("send").addEventListener("click", sendMessage);
+document.getElementById("user-input").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        sendMessage();
+    }
+});
+
+async function sendMessage() {
     const userInput = document.getElementById("user-input").value;
     if (!userInput) return;
 
@@ -38,7 +45,7 @@ document.getElementById("send").addEventListener("click", async function() {
     }, 3000);
 
     document.getElementById("user-input").value = "";
-});
+}
 
 document.getElementById("theme-toggle").addEventListener("change", function() {
     document.body.classList.toggle("dark-mode");
