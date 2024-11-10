@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="popup.js"></script>
+    <h1>Chatbot AI</h1>
+    <div id="chatbox">
+        <div id="messages">Bonjour que puis-je vous aider? </div>
+        <input type="text" id="user-input" placeholder="Tapez votre message...">
+        <button id="sendButton" style="display: flex;">Envoyer</button>
+        <script >
+            document.getElementById("sendButton").addEventListener("click", async function(){messageContainer.innerHTML += `<div class="bot-message">pop!</div>`;});
+         </script>
+    </div>
+    
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
