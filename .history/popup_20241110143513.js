@@ -4,6 +4,9 @@ document.getElementById("send").addEventListener("click", async function() {
 
     const messageContainer = document.getElementById("messages");
 
+    // Ajouter le message "pop!" dans la div messages
+    messageContainer.innerHTML += `<div class="bot-message">pop!</div>`;
+
     const response = await fetch('http://127.0.0.1:5000/chat', {
         method: 'POST',
         headers: {
