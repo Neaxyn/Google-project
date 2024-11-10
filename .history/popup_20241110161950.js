@@ -8,8 +8,18 @@ document.getElementById("user-input").addEventListener("keydown", function(event
 
 async function sendMessage() {
     a++;
-     if (a==2){
-        return;
+    if (a==1){
+        const initialMessageDiv = document.createElement("div");
+        initialMessageDiv.classList.add("initial-message");
+        initialMessageDiv.textContent = "Message 1";
+        document.getElementById("messages").appendChild(initialMessageDiv);
+     }
+
+     if (a==1){
+        const initialMessageDiv = document.createElement("div");
+        initialMessageDiv.classList.add("initial-message");
+        initialMessageDiv.textContent = "Message 1";
+        document.getElementById("messages").appendChild(initialMessageDiv);
      }
     const userInput = document.getElementById("user-input").value;
     if (!userInput) return;

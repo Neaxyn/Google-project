@@ -8,9 +8,10 @@ document.getElementById("user-input").addEventListener("keydown", function(event
 
 async function sendMessage() {
     a++;
-     if (a==2){
-        return;
-     }
+    if (a=!1)
+    {
+     exit();   
+    }
     const userInput = document.getElementById("user-input").value;
     if (!userInput) return;
 
@@ -50,7 +51,6 @@ async function sendMessage() {
     }, 3000);
 
     document.getElementById("user-input").value = "";
-    a=0;
 }
 
 document.getElementById("theme-toggle").addEventListener("change", function() {
