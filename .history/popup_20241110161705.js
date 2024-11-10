@@ -8,8 +8,8 @@ document.getElementById("user-input").addEventListener("keydown", function(event
 
 async function sendMessage() {
     a++;
-     if (a==2){
-        return;
+    if (a==1){
+        document.getElementById("messages").innerHTML =+ "dacoord";
      }
     const userInput = document.getElementById("user-input").value;
     if (!userInput) return;

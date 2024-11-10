@@ -1,16 +1,16 @@
 let a = 0;
 document.getElementById("send").addEventListener("click", sendMessage);
 document.getElementById("user-input").addEventListener("keydown", function(event) {
+    a++;
+    try {
+        a=!1;
+    }
     if (event.key === "Enter") {
         sendMessage();
     }
 });
 
 async function sendMessage() {
-    a++;
-     if (a==2){
-        return;
-     }
     const userInput = document.getElementById("user-input").value;
     if (!userInput) return;
 
@@ -50,7 +50,6 @@ async function sendMessage() {
     }, 3000);
 
     document.getElementById("user-input").value = "";
-    a=0;
 }
 
 document.getElementById("theme-toggle").addEventListener("change", function() {
