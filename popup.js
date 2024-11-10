@@ -15,21 +15,37 @@ document.getElementById("send").addEventListener("click", async function() {
     });
 
     const data = await response.json();
-    const botReply = data.response;  // Changez selon la structure de réponse de l'API de Nano Gemini
+    const botReply = data.response;
 
-    // Ajouter le message de l'utilisateur
-    messageContainer.innerHTML += `<div class="user-message">${userInput}</div>`;
+    const userMessageDiv = document.createElement("div");
+    userMessageDiv.classList.add("user-message");
+    userMessageDiv.textContent = userInput;
+    messageContainer.appendChild(userMessageDiv);
 
-    // Ajouter le message du bot avec l'animation d'écriture
     const botMessageDiv = document.createElement("div");
     botMessageDiv.classList.add("bot-message", "typing");
     botMessageDiv.textContent = botReply;
     messageContainer.appendChild(botMessageDiv);
 
-    // Supprimer la classe "typing" après l'animation
+    // Ajoutez la classe dark-mode si le mode sombre est activé
+    if (document.body.classList.contains("dark-mode")) {
+        userMessageDiv.classList.add("dark-mode");
+        botMessageDiv.classList.add("dark-mode");
+    }
+
     setTimeout(() => {
         botMessageDiv.classList.remove("typing");
-    }, 3000); // La durée de l'animation doit correspondre à celle définie dans les styles CSS
+    }, 3000);
 
-    document.getElementById("user-input").value = "";  // Réinitialiser l'input
+    document.getElementById("user-input").value = "";
+});
+
+document.getElementById("theme-toggle").addEventListener("change", function() {
+    document.body.classList.toggle("dark-mode");
+    document.getElementById("chatbox").classList.toggle("dark-mode");
+    document.getElementById("messages").classList.toggle("dark-mode");
+    document.querySelectorAll(".user-message").forEach(el => el.classList.toggle("dark-mode"));
+    document.querySelectorAll(".bot-message").forEach(el => el.classList.toggle("dark-mode"));
+    document.getElementById("user-input").classList.toggle("dark-mode");
+    document.getElementById("send").classList.toggle("dark-mode");
 });
