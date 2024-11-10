@@ -35,5 +35,35 @@ def chat():
             return jsonify({"response": "Erreur dans le traitement de la demande."}), 500
     return jsonify({"response": "Erreur dans le traitement de la demande."}), 400
 
+#
+# @app.route("/summarize", methods=["POST"])
+# def summarize():
+#     logging.debug("Received summarize request")
+#     url = request.json.get("url")
+#     logging.debug(f"Received URL: {url}")
+#     if url:
+#         try:
+#             api_url = f"https://language.googleapis.com/v1/documents:analyzeEntities?key={api_key}"
+#             headers = {'Content-Type': 'application/json'}
+#             body = {
+#                 "document": {
+#                     "type": "PLAIN_TEXT",
+#                     "content": url
+#                 },
+#                 "encodingType": "UTF8"
+#             }
+#             response = requests.post(api_url, headers=headers, json=body)
+#             response.raise_for_status()
+#             data = response.json()
+#             key_points = [entity['name'] for entity in data.get('entities', [])]
+#             logging.debug(f"Key points: {key_points}")
+#             return jsonify({"key_points": key_points})
+#         except Exception as e:
+#             logging.error(f"Error summarizing URL: {e}")
+#             return jsonify({"response": "Erreur dans le traitement de la demande."}), 500
+#     return jsonify({"response": "Erreur dans le traitement de la demande."}), 400
+
 if __name__ == "__main__":
     app.run(debug=True)
+
+
