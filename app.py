@@ -4,6 +4,7 @@ import google.generativeai as genai
 import os
 from dotenv import load_dotenv
 from flask_cors import CORS
+import requests
 
 app = Flask(__name__)
 CORS(app)
@@ -34,7 +35,7 @@ def chat():
             logging.error(f"Error generating response: {e}")
             return jsonify({"response": "Erreur dans le traitement de la demande."}), 500
     return jsonify({"response": "Erreur dans le traitement de la demande."}), 400
-
+#
 #
 # @app.route("/summarize", methods=["POST"])
 # def summarize():

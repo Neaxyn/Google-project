@@ -117,65 +117,26 @@ body {
     align-items: center;
 }
 
-body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-#chatbox.dark-mode {
-    background-color: #1e1e1e;
-    color: #ffffff;
-}
-
-.user-message.dark-mode {
-    background-color: #2e2e2e;
-}
-
-.bot-message.dark-mode {
-    background-color: #3e3e3e;
-}
-
-#user-input.dark-mode {
-    background-color: #2e2e2e;
-    color: #ffffff;
-}
-
-#send.dark-mode {
+/* style.css */
+.choice-button {
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
     background-color: #007bff;
-    color: #ffffff;
+    color: white;
 }
 
-body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
+.choice-button:hover {
+    background-color: #0056b3;
 }
 
-#chatbox.dark-mode {
-    background-color: #1e1e1e;
-    color: #ffffff;
-}
-
-.user-message.dark-mode {
-    background-color: #2e2e2e;
-    color: #ffffff;
-}
-
-.bot-message.dark-mode {
-    background-color: #3e3e3e;
-    color: #ffffff;
-}
-
-#user-input.dark-mode {
-    background-color: #2e2e2e;
-    color: #ffffff;
-}
-
-#send.dark-mode {
-    background-color: #007bff;
-    color: #ffffff;
-}
-
-#messages.dark-mode {
-    background-color: #1e1e1e;
-    color: #ffffff;
+#choice-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }

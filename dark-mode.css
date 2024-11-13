@@ -1,0 +1,63 @@
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+#chatbox.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.user-message.dark-mode {
+    background-color: #2e2e2e;
+}
+
+.bot-message.dark-mode {
+    background-color: #3e3e3e;
+}
+
+#user-input.dark-mode {
+    background-color: #2e2e2e;
+    color: #ffffff;
+}
+
+#send.dark-mode {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+#chatbox.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.user-message.dark-mode {
+    background-color: rgba(65, 149, 180, 0.81);
+    color: #ffffff;
+}
+
+.bot-message.dark-mode {
+    background-color: #3e3e3e;
+    color: #ffffff;
+}
+
+#user-input.dark-mode {
+    background-color: #2e2e2e;
+    color: #ffffff;
+}
+
+#send.dark-mode {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+#messages.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
