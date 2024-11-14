@@ -1,4 +1,9 @@
-let repetitions = 0;
+
+document.getElementById("chatbot-button").addEventListener("click", function() {
+    document.getElementById("choice-container").style.display = "none";
+    document.getElementById("chatbox").style.display = "block";
+});
+
 document.getElementById("send").addEventListener("click", sendMessage);
 document.getElementById("user-input").addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
@@ -6,21 +11,6 @@ document.getElementById("user-input").addEventListener("keydown", function(event
     }
 });
 // popup.js
-document.getElementById("theme-toggle").addEventListener("change", function() {
-    document.body.classList.toggle("dark-mode");
-    document.getElementById("chatbox").classList.toggle("dark-mode");
-    document.getElementById("messages").classList.toggle("dark-mode");
-    document.querySelectorAll(".user-message").forEach(el => el.classList.toggle("dark-mode"));
-    document.querySelectorAll(".bot-message").forEach(el => el.classList.toggle("dark-mode"));
-    document.getElementById("user-input").classList.toggle("dark-mode");
-    document.getElementById("send").classList.toggle("dark-mode");
-});
-
-const toggle = document.getElementById('dark-mode-toggle');
-toggle.addEventListener('change', () => {
-  document.body.classList.toggle('dark-mode');
-});
-
 
 function formatMessage(text) {
     // Remplacer les sauts de ligne par des balises <br>
@@ -41,8 +31,6 @@ function formatMessage(text) {
 }
 
 async function sendMessage() {
-    repetitions++;
-    if(repetitions>1){return;}
     const userInput = document.getElementById("user-input").value;
     if (!userInput) return;
 

@@ -3,8 +3,6 @@
     to { width: 100%; }
 }
 
-
-
 .typing {
     display: inline-block;
     overflow: hidden;
@@ -170,8 +168,6 @@ body {
     height: 500vh;
 }
 #user-input:hover {
-    transition: background-color 0.5s ease;
+    transition: background-color 1s ease;
     background-color: #e3e3e3;
 }
-
-/*-----------------------------------------------------------------------------------*/

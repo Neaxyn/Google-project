@@ -15,13 +15,6 @@ document.getElementById("theme-toggle").addEventListener("change", function() {
     document.getElementById("user-input").classList.toggle("dark-mode");
     document.getElementById("send").classList.toggle("dark-mode");
 });
-
-const toggle = document.getElementById('dark-mode-toggle');
-toggle.addEventListener('change', () => {
-  document.body.classList.toggle('dark-mode');
-});
-
-
 function formatMessage(text) {
     // Remplacer les sauts de ligne par des balises <br>
     text = text.replace(/\n/g, '<br>');
