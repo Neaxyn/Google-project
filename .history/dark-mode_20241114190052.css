@@ -61,11 +61,3 @@ body.dark-mode {
     background-color: #1e1e1e;
     color: #ffffff;
 }
-#user-input:hover {
-    transition: background-color 0.5s ease;
-    background-color: #e3e3e3;
-}
-
-.choice-button:hover {
-    background-color: #8eaccd;
-}

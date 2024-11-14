@@ -11,7 +11,7 @@
     "service_worker": "background.js"
   },
   "icons": {
-    "16": "16.jpg"
+    "16": "16.jpeg"
   },
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"

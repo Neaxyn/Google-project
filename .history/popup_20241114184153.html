@@ -1,3 +1,4 @@
+<!-- popup.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,10 +12,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <div id="chatbox">
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="theme-toggle">
-            <label class="form-check-label" for="theme-toggle"><i class="bi bi-moon-stars"></i> Dark Mode</label>
+
+    <div id="choice-container">
+        <button id="summarize-button" class="choice-button">Résumer</button>
+        <button id="chatbot-button" class="choice-button">Chatbot</button>
+    </div>
+    <div id="chatbox" style="display: none;">
+        <div class="toggle-container">
+            <input type="checkbox" id="theme-toggle">
+            <label for="theme-toggle">Dark Mode</label>
         </div>
         <div id="messages">Bonjour que puis-je vous aider? </div>
         <div class="input-group">
@@ -26,8 +32,16 @@
     </div>
     <script src="popup.js"></script>
     <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+
+    <script>
+        redirect = function() {
+            window.location.href = "https://www.google.com";
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('summarize-button').addEventListener('click', redirect);
+        });
+    </script>
 </body>
 </html>

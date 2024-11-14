@@ -4,7 +4,7 @@
   "version": "1.0",
   "description": "Chatbot utilisant l'API de Nano Gemini",
   "action": {
-    "default_popup": "index.html"
+    "default_popup": "popup.html"
   },
   "permissions": ["storage", "activeTab", "scripting"],
   "background": {
